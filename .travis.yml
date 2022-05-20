@@ -7,6 +7,10 @@ cache: npm
 install:
   - npm install
   
+branches:
+only:
+  - test-ci
+  
 script:
   - docker pull michelleamesquita/cucumber-bdd-ci
   - docker run -v $PWD/:/app/report/ michelleamesquita/cucumber-bdd-ci
